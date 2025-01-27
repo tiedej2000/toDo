@@ -1,0 +1,129 @@
+//colors
+:root{
+    --black: black;
+    --dark-grey: #171717; 
+    --reg-grey: #585858;
+    --light-grey: #3C3C3C;
+}
+
+// font
+
+$font: "Alata", serif;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    font-family: $font;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--black);
+}
+
+main{
+    width: 100%;
+    display: flex;
+}
+
+
+nav{
+    width: 80px;
+    height: 100vh;
+    border-right: 1px solid var(--light-grey);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    img{
+        width: 30px;
+        height: auto;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+        li{
+            cursor: pointer;
+        }
+
+        li:nth-child(2){
+            border-bottom: 1px solid var(--light-grey);
+            padding-bottom: 20px;
+        }
+    }
+}
+
+// lists section
+
+.lists{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--light-grey);
+    width: 250px;
+    height: 100vh;
+
+    .dates{
+        color: white;
+        font-size: clamp(0.6rem, 1.5vw, 1.2rem);
+        padding: 30px 10px ;
+        border-bottom: 1px solid var(--light-grey);
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 5px;
+
+                &:hover{
+                    background-color: var(--reg-grey);
+                }
+
+                img{
+                    width: 15px;
+                    height: auto;
+                }
+
+                div{
+                    display: flex;
+                    gap: 10px;
+                }
+
+                p{
+                    font-size: clamp(0.3rem, 0.8vw, 0.9rem);
+                }
+
+                h4{
+                    font-weight: 400;
+                }
+
+            }
+        }
+    }
+}
