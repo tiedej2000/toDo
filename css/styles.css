@@ -1,5 +1,6 @@
 :root {
   --black: black;
+  --white: white;
   --dark-grey: #171717;
   --reg-grey: #585858;
   --light-grey: #3C3C3C;
@@ -40,7 +41,7 @@ main {
 nav {
   width: 80px;
   height: 100vh;
-  border-right: 1px solid var(--light-grey);
+  border-right: 1px solid var(--dark-grey);
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
@@ -60,29 +61,29 @@ nav ul li {
   cursor: pointer;
 }
 nav ul li:nth-child(2) {
-  border-bottom: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--dark-grey);
   padding-bottom: 20px;
 }
 
-.lists {
+#todo__lists {
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--light-grey);
+  border-right: 1px solid var(--dark-grey);
   width: 250px;
   height: 100vh;
 }
-.lists .dates {
+#todo__lists .dates {
   color: white;
   font-size: clamp(0.6rem, 1.5vw, 1.2rem);
   padding: 30px 10px;
-  border-bottom: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--dark-grey);
 }
-.lists .dates ul {
+#todo__lists .dates ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.lists .dates ul li {
+#todo__lists .dates ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,20 +91,104 @@ nav ul li:nth-child(2) {
   padding: 10px;
   border-radius: 5px;
 }
-.lists .dates ul li:hover {
+#todo__lists .dates ul li:hover {
   background-color: var(--reg-grey);
 }
-.lists .dates ul li img {
+#todo__lists .dates ul li img {
   width: 15px;
   height: auto;
 }
-.lists .dates ul li div {
+#todo__lists .dates ul li div {
   display: flex;
   gap: 10px;
 }
-.lists .dates ul li p {
+#todo__lists .dates ul li p {
   font-size: clamp(0.3rem, 0.8vw, 0.9rem);
 }
-.lists .dates ul li h4 {
+#todo__lists .dates ul li h4 {
   font-weight: 400;
+}
+
+#todo__content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 45vw;
+  height: 100vh;
+  border-right: 1px solid var(--dark-grey);
+  overflow-y: scroll;
+  padding: 40px 20px;
+  color: var(--white);
+}
+#todo__content .header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#todo__content .header img {
+  width: 20px;
+  height: auto;
+}
+#todo__content .header h2 {
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2vw, 4rem);
+}
+#todo__content .todo__addTask {
+  display: flex;
+  gap: 20px;
+  color: var(--white);
+  font-family: "Alata", serif;
+  align-items: flex-start;
+  align-items: center;
+  border-style: none;
+  background-color: var(--dark-grey);
+  height: 50px;
+  border-radius: 10px;
+  padding: 20px 20px;
+  font-size: 1.6rem;
+  outline: none;
+}
+#todo__content #todo__today {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#todo__content #todo__today ul {
+  width: 100%;
+  height: auto;
+  background-color: var(--dark-grey);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#todo__content #todo__today ul h1 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+#todo__content #todo__today ul li {
+  padding-bottom: 15px;
+  padding-top: 5px;
+  padding: 5px 10px 15px 10px;
+  border-bottom: 1px solid var(--light-grey);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 1.2rem;
+}
+#todo__content #todo__today ul li input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: gray;
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+#todo__content #todo__today ul li input[type=checkbox]:checked {
+  background-color: green;
 }/*# sourceMappingURL=styles.css.map */

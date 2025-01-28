@@ -22,7 +22,7 @@
             </nav>
         </header>
 
-        <section class="lists">
+        <section id="todo__lists">
             <article class="dates">
                 <ul>
                     <li>
@@ -50,6 +50,40 @@
             </article>
         </section>
         
+        <section id="todo__content">
+            <article class="header">
+                <img src="/images/list-dashes.svg" alt="">
+                <h2>Today</h2>
+            </article>
+            <input type="text" placeholder="+ Add Task" class="todo__addTask"></input>
+            <article id="todo__today">
+                <ul class="morning">
+                    <h1>morning</h1>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                </ul>
+                <ul class="noon">
+                    <h1>noon</h1>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                </ul>
+
+                <ul class="evening">
+                    <h1>evening</h1>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                    <li><input type="checkbox">test</li>
+                </ul>
+            </article>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>
